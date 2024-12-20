@@ -1,0 +1,115 @@
+﻿@model FishDto
+@{
+}
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">New Catch</h2>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Method</label>
+                <div class="col-sm-8">
+                    <select class="form-select" asp-for="Method" >
+                    <option value='Rod'>Rod</option>
+                    <option value='Feeder'>Feeder</option>
+                    <option value='Spinning'>Spinning</option>
+                    <option value='Fly Fishing'>Fly Fishing</option>
+                    <option value='Trolling'>Trolling</option>
+                    <option value='Other'>Other</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Type</label>
+                <div class="col-sm-8">
+                    <select class="form-select" asp-for="Type" >
+                    <option value='From the shore'>From The Shore</option>
+                    <option value='From a boat'>From a boat</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Place</label>
+                <div class="col-sm-8">
+                    <select class="form-select" asp-for="Place">
+                        <option value='Lake'>Lake</option>
+                        <option value='River'>River</option>
+                        <option value='Sea'>Sea</option>
+                        <option value='Channel'>Channel</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Weather</label>
+                <div class="col-sm-8">
+                    <select class="form-select" asp-for="Weather">
+                        <option value='Sunny'>Sunny</option>
+                        <option value='Cloudy'>Cloudy</option>
+                        <option value='Partly Cloudy'>Partly Cloudy</option>
+                        <option value='Rainy'>Rainy</option>
+                        <option value='Stormy'>Stormy</option>
+                        <option value='Snowy'>Snowy</option>
+                        <option value='Windy'>Windy</option>
+                        <option value='Foggy'>Foggy</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Weight</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Weight" />
+                    <span asp-validation-for="Weight" class="text-danger"></span>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Image</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="ImageFile" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </div>
+
+                <div class="col-sm-4 d-grid">
+                    <a class="btn-outline-primary" asp-controller="Fishes" asp-action="Index" role="button">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

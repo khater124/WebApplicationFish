@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisherman Diary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2E8B57; /* Nice green color */
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1, h2, p {
+            margin: 10px 0;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007BFF; /* Bootstrap primary color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3; /* Darker shade */
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fisherman Diary</h1>
+    <h2>Welcome to Your Fishing Adventure!</h2>
+    <p>Record your fishing experiences and keep track of your catches.</p>
+    <a href="@Url.Action("Index", "Fishes")">
+    <button class="cta-button">Start Your Journey</button>
+</a>
+    </a>
+    <footer>
+        <p>&copy; 2024 Fisherman Diary | <a href="contact.html" style="color: white;">Contact</a></p>
+    </footer>
+</body>
+</html>
